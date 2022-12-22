@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	font-family: "Poppins", sans-serif;
+}
+
+header {
+	height: 75px;
+	width: 100%;
+	background-color: #1b1b1b;
+	color: #fafafa;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 100px;
+}
+
+header .logo {
+	font-size: 1.2rem;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+header nav {
+	width: 50%;
+	display: block;
+	position: relative;
+}
+
+header nav ul.nav-links {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	list-style: none;
+}
+
+header nav ul.nav-links li a {
+	display: block;
+	text-decoration: none;
+	color: #fafafa;
+	text-align: center;
+	font-size: .9rem;
+	font-weight: 400;
+	padding: 8px 20px;
+	border-radius: 18px;
+	transition: .3s;
+}
+
+header nav ul.nav-links li a:hover {
+	background-color: #fafafa;
+	color: #1b1b1b;
+}
+
+header .hamburger-menu {
+	display: none;
+	position: relative;
+	cursor: pointer;
+}
+
+header .hamburger-menu .line {
+	width: 45px;
+	height: 5px;
+	background-color: #fafafa;
+	border-radius: 3px;
+	margin: 5px 0;
+}
+
+@media screen and (max-width: 960px) {
+	header {
+		padding: 0 80px;
+	}
+}
+
+@media screen and (max-width: 767px){i
+	header {
+		padding: 0 0;
+	}
+
+	header .hamburger-menu {
+		display: block;
+	}
+
+	header nav { 
+		display: none;
+		position: absolute;
+		top: 75px;
+		left: 0;
+		width: 100vw;
+		min-height: 90vh;
+		background-color: #1b1b1b;
+	}
+
+	header nav ul.nav-links {
+		display: block;
+		width: fit-content;
+		margin: 80px auto 0 auto;
+	}
+
+	header nav ul.nav-links li {
+		margin-bottom: 15px;
+	}
+
+	header .hamburger-menu {
+		z-index: 1001;
+	}
+}
